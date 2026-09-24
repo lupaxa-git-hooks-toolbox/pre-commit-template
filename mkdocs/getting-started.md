@@ -1,4 +1,4 @@
-# Getting started
+# Getting Started
 
 ## Requirements
 
@@ -7,7 +7,7 @@
 -   The [multiplexer](https://github.com/lupaxa-git-hooks-toolbox/git-hooks-multiplexer)
     installed as `.git/hooks/pre-commit` if you want this file run as a subhook
 
-## Copy the template
+## Copy the Template
 
 ```bash
 mkdir -p hooks/pre-commit
@@ -17,7 +17,7 @@ chmod +x hooks/pre-commit/01-ruff
 
 A later setup tool will copy this same file from a hook repo.
 
-## Fill the header
+## Fill the Header
 
 Set `REQUIRED_COMMANDS`, `TOOL`, and `FILE_EXTENSIONS`. Example:
 
@@ -29,7 +29,7 @@ FILE_EXTENSIONS = [".py"]
 
 Do not edit below `# STOP HERE`.
 
-## First check
+## First Check
 
 ```bash
 hooks/pre-commit/01-ruff

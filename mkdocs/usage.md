@@ -1,12 +1,12 @@
 # Usage
 
-## Header knobs
+## Header Knobs
 
 Edit only the config block above `# STOP HERE`. Defaults make a copied
 file a strict, silent no-op (require `git`, then exit 0) until `TOOL`,
 `run_check`, or `UPFRONT_PROMPT` is set.
 
-### Tool and files
+### Tool and Files
 
 | Name                | Meaning                                                                                          |
 | :------------------ | :----------------------------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@ A staged file is a candidate if it is readable. It then matches if:
 - `FILE_EXTENSIONS` and `SHEBANG_PATTERN` are both unset/empty → all readable staged files; or
 - its name ends with an extension **or** its shebang matches (either filter may be set alone).
 
-### Prompts and acceptance
+### Prompts and Acceptance
 
 | Name                      | Meaning                                                                              |
 | :------------------------ | :----------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ A staged file is a candidate if it is readable. It then matches if:
 `git` is never skipped. Missing `git` always aborts with exit 1, regardless
 of `ON_MISSING_TOOL`.
 
-### Escape hatches
+### Escape Hatches
 
 Leave unset (`None`) unless needed.
 
@@ -53,7 +53,7 @@ Prompt-only hook: `TOOL` is unset or empty and `run_check` is unset. The
 engine still requires `git`, runs the upfront prompt if configured, and does
 not list or check staged files.
 
-## Run loop
+## Run Loop
 
 1.   Resolve `git` via `shutil.which`. Missing `git` → message on stderr, exit 1
      (not subject to `ON_MISSING_TOOL`).
@@ -77,7 +77,7 @@ not list or check staged files.
      on `/dev/tty`; cannot open TTY → `ON_NO_TTY_FINDINGS`. “Yes” → exit 0.
      “No” or no prompt configured → exit `code` if it is non-zero, else 1.
 
-## `/dev/tty` vs stdin
+## `/dev/tty` Vs Stdin
 
 Read yes/no answers from `/dev/tty`, never from stdin. Git and the
 multiplexer may already be using stdin for a payload. Accept `y` / `yes` /

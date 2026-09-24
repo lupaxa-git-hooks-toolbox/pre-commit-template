@@ -1,6 +1,6 @@
 # Reference
 
-## Header defaults
+## Header Defaults
 
 | Name                      | Type                           | Default   |
 | :------------------------ | :----------------------------- | :-------- |
@@ -22,7 +22,7 @@
 Unknown `RUN_MODE`, `ON_MISSING_TOOL`, `ON_NO_TTY_UPFRONT`, or
 `ON_NO_TTY_FINDINGS` values print a message on stderr and exit 1.
 
-## Escape-hatch signatures
+## Escape-Hatch Signatures
 
 | Name                    | Signature                   | Role                                                      |
 | :---------------------- | :-------------------------- | :-------------------------------------------------------- |
@@ -31,14 +31,14 @@ Unknown `RUN_MODE`, `ON_MISSING_TOOL`, `ON_NO_TTY_UPFRONT`, or
 | `should_upfront_prompt` | `() -> bool`                | Replaces `UPFRONT_WHEN` when deciding whether to ask.     |
 | `current_branch`        | `() -> str`                 | Engine helper for predicates (for example vs `"master"`). |
 
-## No-TTY knobs
+## No-TTY Knobs
 
 | Knob                 | When it applies                                      | `"abort"`                 | `"skip"`      |
 | :------------------- | :--------------------------------------------------- | :------------------------ | :------------ |
 | `ON_NO_TTY_UPFRONT`  | Upfront prompt cannot open `/dev/tty`                | Message on stderr, exit 1 | Continue      |
 | `ON_NO_TTY_FINDINGS` | Findings confirm cannot open `/dev/tty` after a fail | Message on stderr, exit 1 | Treat as pass |
 
-## Exit codes
+## Exit Codes
 
 | Code     | Meaning                                                                                          |
 | :------- | :----------------------------------------------------------------------------------------------- |
@@ -46,7 +46,7 @@ Unknown `RUN_MODE`, `ON_MISSING_TOOL`, `ON_NO_TTY_UPFRONT`, or
 | `1`      | Not a Git work tree; missing tool (abort); user said no; no-TTY abort; failed check with no code |
 | Tool `N` | Failed `TOOL` / `run_check` when we are not overriding the code via a findings “yes”             |
 
-## Staged listing
+## Staged Listing
 
 Staged paths come from:
 
@@ -58,7 +58,7 @@ The engine splits the output with `splitlines()` (newline-separated), not on
 whitespace, so filenames with spaces stay intact. Paths that are missing or
 unreadable are skipped; they do not abort the hook.
 
-## Hook file
+## Hook File
 
 The product is the single file `src/pre-commit-template`. It uses the Python
 standard library only. There is no package to install or import at runtime.

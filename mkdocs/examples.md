@@ -2,7 +2,7 @@
 
 Docs-only headers. This repo does not ship finished hook scripts.
 
-## Silent ruff
+## Silent Ruff
 
 Strict lint default: require `ruff`, check staged Python files (and
 shebang matches), abort on tool failure.
@@ -14,7 +14,7 @@ FILE_EXTENSIONS = [".py"]
 SHEBANG_PATTERN = r"python3?"
 ```
 
-## Confirm commits to master
+## Confirm Commits to Master
 
 Prompt only on `master`. When `/dev/tty` is unavailable (IDE / Cursor),
 skip the prompt so the commit is not blocked.

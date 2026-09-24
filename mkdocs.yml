@@ -3,7 +3,7 @@
 # Site Information
 # =============================================================================
 
-site_name: Pre-commit template
+site_name: Pre-Commit Template
 
 site_description: >-
   One self-contained Git pre-commit hook script you copy and configure. No pip
@@ -26,7 +26,7 @@ extra:
   language_picker: true
   # Optional short label for the header GitHub link.
   # If omitted, uses the repo segment of repo_name (org/repo → repo).
-  repo_display_name: Pre-commit template
+  repo_display_name: Pre-Commit Template
   # Footer (rendered by overrides/partials/copyright.html).
   footer_name: The Lupaxa Project
   footer_taglines:
@@ -59,6 +59,9 @@ use_directory_urls: true
 theme:
   name: material
   custom_dir: overrides
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   language: en
   logo: assets/images/logo.png
   favicon: assets/images/favicon.png
@@ -97,7 +100,7 @@ hooks:
 
 nav:
   - Home: index.md
-  - Getting started: getting-started.md
+  - Getting Started: getting-started.md
   - Usage: usage.md
   - Reference: reference.md
   - Examples: examples.md

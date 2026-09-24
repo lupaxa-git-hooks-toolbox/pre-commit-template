@@ -4,7 +4,7 @@
     </a>
 </p>
 
-<h1 align="center">Pre-commit template</h1>
+<h1 align="center">Pre-Commit Template</h1>
 
 One self-contained script. Copy it into `hooks/pre-commit/<name>`, edit the
 header, and `chmod +x` it. No pip install. The multiplexer runs it as a
@@ -39,8 +39,10 @@ python -m pytest
 
 ## Documentation
 
-The guide is in [`mkdocs/`](mkdocs/index.md). After installing the `dev`
-extras:
+The published guide is at
+<https://pre-commit-template.thelupaxaproject.org/>.
+
+Site Markdown lives in `mkdocs/`. After installing the `dev` extras:
 
 ```bash
 mkdocs serve

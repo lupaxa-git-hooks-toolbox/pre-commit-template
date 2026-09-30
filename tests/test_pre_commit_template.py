@@ -517,8 +517,6 @@ def test_docs_name_the_header_and_worked_examples():
     readme = (REPO_ROOT / "README.md").read_text(encoding="utf-8")
     assert "src/pre-commit-template" in readme
     assert "Licence" not in readme and "License" not in readme
-    usage = (REPO_ROOT / "mkdocs" / "usage.md").read_text(encoding="utf-8")
-    assert "REQUIRED_COMMANDS" in usage
-    examples = (REPO_ROOT / "mkdocs" / "examples.md").read_text(encoding="utf-8")
-    assert 'TOOL = ["ruff", "check"]' in examples
-    assert "ON_NO_TTY_UPFRONT" in examples
+    assert "REQUIRED_COMMANDS" in readme
+    assert 'TOOL = ["ruff", "check"]' in readme
+    assert "ON_NO_TTY_UPFRONT" in readme

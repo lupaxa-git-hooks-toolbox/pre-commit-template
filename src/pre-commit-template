@@ -17,7 +17,7 @@ import sys
 from collections.abc import Callable
 from typing import TextIO
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 
 # -------------------------------------------------------------------------------- #
 # Config (edit this)                                                               #
